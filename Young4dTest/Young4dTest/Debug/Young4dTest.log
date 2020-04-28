@@ -1,0 +1,47 @@
+﻿  Source.cpp
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(102): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(179): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(242): warning C4018: <=: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(244): warning C4018: <=: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(246): warning C4018: <=: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(288): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(302): warning C4244: инициализация: преобразование "__int64" в "unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(304): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(324): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(392): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(417): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(420): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(443): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(447): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(452): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(464): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(469): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(473): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(478): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(492): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(494): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(495): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(509): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(513): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(515): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(530): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(546): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(549): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(563): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(565): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(592): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(597): warning C4244: аргумент: преобразование "ull" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(600): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(601): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(616): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(619): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(620): warning C4244: аргумент: преобразование "__int64" в "const unsigned int", возможна потеря данных
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(626): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(641): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(658): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(661): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(667): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(668): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(681): warning C4018: <: несоответствие типов со знаком и без знака
+c:\users\igor\source\repos\young4dtest\young4dtest\source.cpp(692): warning C4018: <: несоответствие типов со знаком и без знака
+  Young4dTest.vcxproj -> C:\Users\Igor\source\repos\Young4dTest\Debug\Young4dTest.exe

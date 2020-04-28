@@ -1,0 +1,377 @@
+#include <stdio.h>
+#include <vector>
+#include <iostream>
+#include <thread>
+#include <atomic>
+#include "stdlib.h"
+#include "InfInt.h"
+#include <dos.h>
+
+using namespace std;
+typedef vector<vector<vector<unsigned int>>> v3i;
+typedef vector<vector<vector<bool>>> v3b;
+typedef vector<vector<bool>> v2b;
+typedef vector<bool> vb;
+
+class Young2D {
+public:
+	vector<int> columns = { 1 };
+	Young2D(int startCubesInZeroPoint) {
+		columns.at(0) = startCubesInZeroPoint;
+	}
+	Young2D() {}
+	//returns 1 if added 0 if not. If you use checkOnly it will only return the possibility of adding a cube.
+	int AddCube(int x, bool checkOnly = false)
+	{
+		if (x < 0)
+			return 0;
+		if (columns.size() == x) //you can append if previous not zero
+		{
+			if (columns.at(x - 1) > 0) {
+				if(!checkOnly)
+					columns.push_back(1);	//new column
+				return 1;
+			}
+		}
+		else if ((int)columns.size() > x)
+		{
+			if (x==0 || columns.at(x - 1) > columns.at(x)) {
+				if (!checkOnly)
+					columns.at(x)++;
+				return 1;
+			}
+		}
+		//previous column does not exist
+		return 0;
+	}
+
+	int GetColumn(int x)
+	{
+		if ((int)columns.size() > x)
+			return columns.at(x);
+		else
+			return 0;
+	}
+
+	void Print()
+	{
+		for (int i = 0; i < (int)columns.size(); i++)
+			cout << columns[i] << ' ';
+		cout << endl;
+	}
+
+	void Clear()
+	{
+		columns.clear();
+	}
+
+	Young2D* Clone()
+	{
+		Young2D* newObj = new Young2D();
+		newObj->columns = columns;
+		return newObj;
+	}
+
+	bool operator==(Young2D& other) const
+	{
+		bool result = columns.size() == other.columns.size();
+		for (int x = 0; result && x < columns.size(); x++)
+			result = columns[x] == other.columns[x];
+		return result;
+	}
+
+};
+
+class Young3D {
+public:
+	vector<Young2D> layers;
+	Young3D(int startCubesInZeroPoint) {
+		layers = { Young2D(1) };
+		layers.at(0).columns.at(0) = startCubesInZeroPoint;
+	}
+	Young3D() {}
+	//returns 1 if added 0 if not. If you use checkOnly it will only return the possibility of adding a cube
+	int AddCube(int x, int y, bool checkOnly = false)
+	{
+		if (y < 0)
+			return 0;
+		if (y == (int)layers.size()) // new layer needed
+		{
+			if (x==0 && layers.at(y - 1).columns.at(0) > 0) {
+				if (!checkOnly)
+					layers.push_back(Young2D(1));
+				return 1;
+			}
+		}
+		else if (y < (int)layers.size()) //add in existing layer
+			if(y==0 || layers.at(y - 1).GetColumn(x) > layers.at(y).GetColumn(x)) //y-condition check
+				return layers.at(y).AddCube(x, checkOnly);
+		//err, cannot be added
+		return 0;
+	}
+
+	Young2D* GetLayer(int index)
+	{
+		if (index < (int)layers.size())
+			return &layers[index];
+		return NULL;
+	}
+
+	void Print()
+	{
+		for (int i = 0; i < (int)layers.size(); i++)
+			layers[i].Print();
+		cout << endl;
+	}
+
+	Young3D* Clone()
+	{
+		Young3D* newObj = new Young3D();
+		newObj->layers = layers;
+		for (int x = 0; x < (int)layers.size(); x++)
+			newObj->layers[x] = *layers[x].Clone();
+		return newObj;
+	}
+
+	void Clear()
+	{
+		for (int i = 0; i < (int)layers.size(); i++)
+			layers[i].Clear();
+	}
+
+	bool operator==(Young3D& other) const
+	{
+		bool result = layers.size() == other.layers.size();
+		for (int x = 0; result && x < layers.size(); x++)
+			result = layers[x] == other.layers[x];
+		return result;
+	}
+
+};
+
+class Young4D {
+public:
+	vector<Young3D> layers;
+	Young4D(int startCubesInZeroPoint) {
+		layers = { Young3D(1) };
+		layers.at(0).GetLayer(0)->columns.at(0) = startCubesInZeroPoint;
+		cornerMatrix = { { {true, /*1, 0, 0*/ true}, { /*0, 1, 0*/true} }, {{/*1, 0, 0*/true}} };
+	}
+	Young4D() {}
+	//dimension of current 4d graph
+	InfInt dim = "1";
+	int generation = 1;
+	v3b cornerMatrix; //default matrix
+	//returns 1 if added 0 if not
+	int AddCube(int x, int y, int z, bool checkOnly = false, bool RecalcCorner = true)
+	{
+		if (z < 0)
+			return 0;
+		if (z == (int)layers.size()) // new 3d layer needed
+		{
+			Young2D* lyr;
+			if ((lyr = layers.at(z - 1).GetLayer(y)) != NULL) {
+				if (y == 0 && x == 0 && lyr->GetColumn(x) != 0)
+				{
+					if (!checkOnly) {
+						layers.push_back(Young3D(1));
+						if (RecalcCorner)
+							RecalcCornerMatrix(x, y, z);
+					}
+					return 1;
+				}
+			}
+		}
+		else if (z < (int)layers.size())	//add in existing layer
+		{
+			Young2D* lyr, *lyr1 = NULL;
+			if (z == 0 || ((lyr = layers.at(z - 1).GetLayer(y))!=NULL && (lyr1 = layers.at(z).GetLayer(y)) == NULL || (lyr1!=NULL
+				&& lyr->GetColumn(x) > lyr1->GetColumn(x)))) //z - condition check
+				if (layers.at(z).AddCube(x, y, checkOnly))
+				{
+					if (RecalcCorner && !checkOnly)
+						RecalcCornerMatrix(x, y, z);
+					return 1;
+				}
+		}
+		//err, cannot be added
+		return 0;
+	}
+
+	void RecalcCornerPoint(int x, int y, int z)
+	{
+		//increase the size of container if needed
+		while (cornerMatrix.size() <= z)
+			cornerMatrix.push_back({ {false} });
+		while (cornerMatrix.at(z).size() <= y)
+			cornerMatrix.at(z).push_back({ false });
+		while (cornerMatrix.at(z).at(y).size() <= x)
+			cornerMatrix.at(z).at(y).push_back(false);
+		//just change the value
+		cornerMatrix.at(z).at(y).at(x) = AddCube(x, y, z, true, false);
+	}
+
+	//pass coords of the added cube
+	void RecalcCornerMatrix(int x, int y, int z)
+	{
+		RecalcCornerPoint(x, y, z);
+		RecalcCornerPoint(x + 1, y, z);
+		RecalcCornerPoint(x, y + 1, z);
+		RecalcCornerPoint(x, y, z + 1);
+	}
+
+	vector<Young4D> CreateNextGen(bool recalcChildren = true)
+	{
+		vector<Young4D> nextGen = {};
+		for (int z = 0; z < (int)cornerMatrix.size(); z++)
+			for (int y = 0; y < (int)cornerMatrix[z].size(); y++)
+				for (int x = 0; x < (int)cornerMatrix[z][y].size(); x++)
+					if (cornerMatrix[z][y][x]) {
+						Young4D *cln = Clone();
+						cln->AddCube(x, y, z, false, recalcChildren);
+						cln->generation += 1;
+						cln->dim = InfInt(dim);
+						nextGen.push_back(*cln);
+					}
+		return nextGen;
+	}
+
+	void Print()
+	{
+		for (int i = 0; i < (int)layers.size(); i++)
+			layers[i].Print();
+		cout << endl;
+	}
+
+	void PrintCorners()
+	{
+		for (int z = 0; z < (int)cornerMatrix.size(); z++)
+		{
+			for (int y = 0; y < (int)cornerMatrix[z].size(); y++)
+			{
+				for (int x = 0; x < (int)cornerMatrix[z][y].size(); x++)
+				{
+					if (cornerMatrix[z][y][x])
+						cout << "1 ";
+					else
+						cout << "0 ";
+				}
+				cout << endl;
+			}
+			cout << endl;
+		}
+	}
+
+	Young4D* Clone()
+	{
+		Young4D* newObj = new Young4D();
+		newObj->layers = layers;
+		newObj->cornerMatrix = cornerMatrix;
+		for (int x = 0; x < (int)layers.size(); x++)
+			newObj->layers[x] = *layers[x].Clone();
+		return newObj;
+	}
+
+	void Clear()
+	{
+		for (int i = 0; i < (int)layers.size(); i++)
+			layers[i].Clear();
+	}
+
+	bool operator==(Young4D& other) const
+	{
+		bool result = layers.size() == other.layers.size();
+		for (int x = 0; result && x < layers.size(); x++)
+			result = layers[x] == other.layers[x];
+		return result;
+	}
+};
+
+atomic<int> threadCount = 0;
+
+void CreateNextGen(vector<vector<Young4D>> &container, Young4D &parent, int containerIndex)
+{
+	container[containerIndex] = parent.CreateNextGen();
+	threadCount--;
+}
+
+vector<vector<Young4D>> GenerateYoung4DTree(Young4D zeroGraph = Young4D(1), bool minusZ = true)
+{
+	int genCount = 0;
+	cin >> genCount;
+	vector<vector<Young4D>> generations(genCount);
+	generations[0] = { zeroGraph };
+	for (int x = 0; x < generations.size() - 1; x++)
+	{
+		
+		vector<vector<Young4D>> ngen (generations[x].size());
+		vector<thread> threads;
+		threads.reserve(generations[x].size());
+		//generate from all previous parents in multiple threads
+		for (int y = 0; y < generations[x].size(); y++) {
+			int yy = y;
+			int xx = x;
+			threads.emplace_back([&] {CreateNextGen(ngen, generations[xx][yy], yy); });
+			threadCount++;
+		}
+		//collect threads
+		while (threadCount)
+			cout<<threadCount;// this_thread::yield();
+		for (auto& th : threads)
+			th.join();
+		//store everything in one container
+		for (int y = 0; y < generations[x].size(); y++) {
+			generations[x + 1].insert(generations[x + 1].end(), ngen[y].begin(), ngen[y].end());
+		}
+		//search for same
+		for (int y = 0; y < generations[x + 1].size(); y++) {
+			for (int z = y + 1; z < generations[x + 1].size(); z++) {
+				if (generations[x + 1][y] == generations[x + 1][z])
+				{
+					generations[x + 1][y].dim += generations[x + 1][z].dim;
+					generations[x + 1][z].Clear();
+					generations[x + 1].erase(generations[x + 1].begin() + z);
+					if (minusZ)
+						z--;
+				}
+			}
+		}
+	}
+	return generations;
+}
+
+void PrintYoung4DTree(vector<vector<Young4D>> generations, bool drawCorners = false)
+{
+	for (int x = 0; x < generations.size(); x++)
+	{
+		cout << "GENERATION " << x + 1 << endl;
+		for (int y = 0; y < generations[x].size(); y++) {
+			cout << "VARIANT " << y + 1 << "; DIMENSION " << generations[x][y].dim.toString() << endl;
+			generations[x][y].Print();
+			if (drawCorners) {
+				cout << "CORNERS: " << endl;
+				generations[x][y].PrintCorners();
+			}
+		}
+	}
+}
+
+
+int main()
+{
+	PrintYoung4DTree(GenerateYoung4DTree(), false);
+	/*diagram4D->AddCube(0, 0, 1);
+	diagram4D->AddCube(0, 1, 0);
+	diagram4D->AddCube(0, 0, 1); //err - cannot add
+	diagram4D->AddCube(0, 0, 0);
+	diagram4D->AddCube(0, 0, 1);
+	diagram4D->AddCube(1, 0, 1); //err - cannot add
+	diagram4D->AddCube(1, 0, 0);
+	diagram4D->AddCube(2, 0, 0);
+	diagram4D->AddCube(1, 0, 1);
+	diagram4D->Print();
+	diagram4D->PrintCorners();
+	diagram4D->Clear();*/
+	system("pause");
+	return 0;
+}

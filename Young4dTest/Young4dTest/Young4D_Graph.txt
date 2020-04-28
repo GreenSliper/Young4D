@@ -1,0 +1,561 @@
+level=1
+1|id=1|dim=1|connected=
+
+level=2
+2|id=2|dim=1|connected=1
+1 1|id=3|dim=1|connected=1
+1,1|id=4|dim=1|connected=1
+1;1|id=5|dim=1|connected=1
+
+level=3
+3|id=6|dim=1|connected=2
+2 1|id=7|dim=2|connected=2 3
+2,1|id=8|dim=2|connected=2 4
+2;1|id=9|dim=2|connected=2 5
+1 1 1|id=10|dim=1|connected=3
+1 1,1|id=11|dim=2|connected=3 4
+1 1;1|id=12|dim=2|connected=3 5
+1,1,1|id=13|dim=1|connected=4
+1,1;1|id=14|dim=2|connected=4 5
+1;1;1|id=15|dim=1|connected=5
+
+level=4
+4|id=16|dim=1|connected=6
+3 1|id=17|dim=3|connected=6 7
+3,1|id=18|dim=3|connected=6 8
+3;1|id=19|dim=3|connected=6 9
+2 2|id=20|dim=2|connected=7
+2 1 1|id=21|dim=3|connected=7 10
+2 1,1|id=22|dim=6|connected=7 8 11
+2 1;1|id=23|dim=6|connected=7 9 12
+2,2|id=24|dim=2|connected=8
+2,1,1|id=25|dim=3|connected=8 13
+2,1;1|id=26|dim=6|connected=8 9 14
+2;2|id=27|dim=2|connected=9
+2;1;1|id=28|dim=3|connected=9 15
+1 1 1 1|id=29|dim=1|connected=10
+1 1 1,1|id=30|dim=3|connected=10 11
+1 1 1;1|id=31|dim=3|connected=10 12
+1 1,1 1|id=32|dim=2|connected=11
+1 1,1,1|id=33|dim=3|connected=11 13
+1 1,1;1|id=34|dim=6|connected=11 12 14
+1 1;1 1|id=35|dim=2|connected=12
+1 1;1;1|id=36|dim=3|connected=12 15
+1,1,1,1|id=37|dim=1|connected=13
+1,1,1;1|id=38|dim=3|connected=13 14
+1,1;1,1|id=39|dim=2|connected=14
+1,1;1;1|id=40|dim=3|connected=14 15
+1;1;1;1|id=41|dim=1|connected=15
+
+level=5
+5|id=42|dim=1|connected=16
+4 1|id=43|dim=4|connected=16 17
+4,1|id=44|dim=4|connected=16 18
+4;1|id=45|dim=4|connected=16 19
+3 2|id=46|dim=5|connected=17 20
+3 1 1|id=47|dim=6|connected=17 21
+3 1,1|id=48|dim=12|connected=17 18 22
+3 1;1|id=49|dim=12|connected=17 19 23
+3,2|id=50|dim=5|connected=18 24
+3,1,1|id=51|dim=6|connected=18 25
+3,1;1|id=52|dim=12|connected=18 19 26
+3;2|id=53|dim=5|connected=19 27
+3;1;1|id=54|dim=6|connected=19 28
+2 2 1|id=55|dim=5|connected=20 21
+2 2,1|id=56|dim=8|connected=20 22
+2 2;1|id=57|dim=8|connected=20 23
+2 1 1 1|id=58|dim=4|connected=21 29
+2 1 1,1|id=59|dim=12|connected=21 22 30
+2 1 1;1|id=60|dim=12|connected=21 23 31
+2 1,2|id=61|dim=8|connected=22 24
+2 1,1 1|id=62|dim=8|connected=22 32
+2 1,1,1|id=63|dim=12|connected=22 25 33
+2 1,1;1|id=64|dim=24|connected=22 23 26 34
+2 1;2|id=65|dim=8|connected=23 27
+2 1;1 1|id=66|dim=8|connected=23 35
+2 1;1;1|id=67|dim=12|connected=23 28 36
+2,2,1|id=68|dim=5|connected=24 25
+2,2;1|id=69|dim=8|connected=24 26
+2,1,1,1|id=70|dim=4|connected=25 37
+2,1,1;1|id=71|dim=12|connected=25 26 38
+2,1;2|id=72|dim=8|connected=26 27
+2,1;1,1|id=73|dim=8|connected=26 39
+2,1;1;1|id=74|dim=12|connected=26 28 40
+2;2;1|id=75|dim=5|connected=27 28
+2;1;1;1|id=76|dim=4|connected=28 41
+1 1 1 1 1|id=77|dim=1|connected=29
+1 1 1 1,1|id=78|dim=4|connected=29 30
+1 1 1 1;1|id=79|dim=4|connected=29 31
+1 1 1,1 1|id=80|dim=5|connected=30 32
+1 1 1,1,1|id=81|dim=6|connected=30 33
+1 1 1,1;1|id=82|dim=12|connected=30 31 34
+1 1 1;1 1|id=83|dim=5|connected=31 35
+1 1 1;1;1|id=84|dim=6|connected=31 36
+1 1,1 1,1|id=85|dim=5|connected=32 33
+1 1,1 1;1|id=86|dim=8|connected=32 34
+1 1,1,1,1|id=87|dim=4|connected=33 37
+1 1,1,1;1|id=88|dim=12|connected=33 34 38
+1 1,1;1 1|id=89|dim=8|connected=34 35
+1 1,1;1,1|id=90|dim=8|connected=34 39
+1 1,1;1;1|id=91|dim=12|connected=34 36 40
+1 1;1 1;1|id=92|dim=5|connected=35 36
+1 1;1;1;1|id=93|dim=4|connected=36 41
+1,1,1,1,1|id=94|dim=1|connected=37
+1,1,1,1;1|id=95|dim=4|connected=37 38
+1,1,1;1,1|id=96|dim=5|connected=38 39
+1,1,1;1;1|id=97|dim=6|connected=38 40
+1,1;1,1;1|id=98|dim=5|connected=39 40
+1,1;1;1;1|id=99|dim=4|connected=40 41
+1;1;1;1;1|id=100|dim=1|connected=41
+
+level=6
+6|id=101|dim=1|connected=42
+5 1|id=102|dim=5|connected=42 43
+5,1|id=103|dim=5|connected=42 44
+5;1|id=104|dim=5|connected=42 45
+4 2|id=105|dim=9|connected=43 46
+4 1 1|id=106|dim=10|connected=43 47
+4 1,1|id=107|dim=20|connected=43 44 48
+4 1;1|id=108|dim=20|connected=43 45 49
+4,2|id=109|dim=9|connected=44 50
+4,1,1|id=110|dim=10|connected=44 51
+4,1;1|id=111|dim=20|connected=44 45 52
+4;2|id=112|dim=9|connected=45 53
+4;1;1|id=113|dim=10|connected=45 54
+3 3|id=114|dim=5|connected=46
+3 2 1|id=115|dim=16|connected=46 47 55
+3 2,1|id=116|dim=25|connected=46 48 56
+3 2;1|id=117|dim=25|connected=46 49 57
+3 1 1 1|id=118|dim=10|connected=47 58
+3 1 1,1|id=119|dim=30|connected=47 48 59
+3 1 1;1|id=120|dim=30|connected=47 49 60
+3 1,2|id=121|dim=25|connected=48 50 61
+3 1,1 1|id=122|dim=20|connected=48 62
+3 1,1,1|id=123|dim=30|connected=48 51 63
+3 1,1;1|id=124|dim=60|connected=48 49 52 64
+3 1;2|id=125|dim=25|connected=49 53 65
+3 1;1 1|id=126|dim=20|connected=49 66
+3 1;1;1|id=127|dim=30|connected=49 54 67
+3,3|id=128|dim=5|connected=50
+3,2,1|id=129|dim=16|connected=50 51 68
+3,2;1|id=130|dim=25|connected=50 52 69
+3,1,1,1|id=131|dim=10|connected=51 70
+3,1,1;1|id=132|dim=30|connected=51 52 71
+3,1;2|id=133|dim=25|connected=52 53 72
+3,1;1,1|id=134|dim=20|connected=52 73
+3,1;1;1|id=135|dim=30|connected=52 54 74
+3;3|id=136|dim=5|connected=53
+3;2;1|id=137|dim=16|connected=53 54 75
+3;1;1;1|id=138|dim=10|connected=54 76
+2 2 2|id=139|dim=5|connected=55
+2 2 1 1|id=140|dim=9|connected=55 58
+2 2 1,1|id=141|dim=25|connected=55 56 59
+2 2 1;1|id=142|dim=25|connected=55 57 60
+2 2,2|id=143|dim=16|connected=56 61
+2 2,1 1|id=144|dim=16|connected=56 62
+2 2,1,1|id=145|dim=20|connected=56 63
+2 2,1;1|id=146|dim=40|connected=56 57 64
+2 2;2|id=147|dim=16|connected=57 65
+2 2;1 1|id=148|dim=16|connected=57 66
+2 2;1;1|id=149|dim=20|connected=57 67
+2 1 1 1 1|id=150|dim=5|connected=58 77
+2 1 1 1,1|id=151|dim=20|connected=58 59 78
+2 1 1 1;1|id=152|dim=20|connected=58 60 79
+2 1 1,2|id=153|dim=20|connected=59 61
+2 1 1,1 1|id=154|dim=25|connected=59 62 80
+2 1 1,1,1|id=155|dim=30|connected=59 63 81
+2 1 1,1;1|id=156|dim=60|connected=59 60 64 82
+2 1 1;2|id=157|dim=20|connected=60 65
+2 1 1;1 1|id=158|dim=25|connected=60 66 83
+2 1 1;1;1|id=159|dim=30|connected=60 67 84
+2 1,2 1|id=160|dim=16|connected=61 62
+2 1,2,1|id=161|dim=25|connected=61 63 68
+2 1,2;1|id=162|dim=40|connected=61 64 69
+2 1,1 1,1|id=163|dim=25|connected=62 63 85
+2 1,1 1;1|id=164|dim=40|connected=62 64 86
+2 1,1,1,1|id=165|dim=20|connected=63 70 87
+2 1,1,1;1|id=166|dim=60|connected=63 64 71 88
+2 1,1;2|id=167|dim=40|connected=64 65 72
+2 1,1;1 1|id=168|dim=40|connected=64 66 89
+2 1,1;1,1|id=169|dim=40|connected=64 73 90
+2 1,1;1;1|id=170|dim=60|connected=64 67 74 91
+2 1;2 1|id=171|dim=16|connected=65 66
+2 1;2;1|id=172|dim=25|connected=65 67 75
+2 1;1 1;1|id=173|dim=25|connected=66 67 92
+2 1;1;1;1|id=174|dim=20|connected=67 76 93
+2,2,2|id=175|dim=5|connected=68
+2,2,1,1|id=176|dim=9|connected=68 70
+2,2,1;1|id=177|dim=25|connected=68 69 71
+2,2;2|id=178|dim=16|connected=69 72
+2,2;1,1|id=179|dim=16|connected=69 73
+2,2;1;1|id=180|dim=20|connected=69 74
+2,1,1,1,1|id=181|dim=5|connected=70 94
+2,1,1,1;1|id=182|dim=20|connected=70 71 95
+2,1,1;2|id=183|dim=20|connected=71 72
+2,1,1;1,1|id=184|dim=25|connected=71 73 96
+2,1,1;1;1|id=185|dim=30|connected=71 74 97
+2,1;2,1|id=186|dim=16|connected=72 73
+2,1;2;1|id=187|dim=25|connected=72 74 75
+2,1;1,1;1|id=188|dim=25|connected=73 74 98
+2,1;1;1;1|id=189|dim=20|connected=74 76 99
+2;2;2|id=190|dim=5|connected=75
+2;2;1;1|id=191|dim=9|connected=75 76
+2;1;1;1;1|id=192|dim=5|connected=76 100
+1 1 1 1 1 1|id=193|dim=1|connected=77
+1 1 1 1 1,1|id=194|dim=5|connected=77 78
+1 1 1 1 1;1|id=195|dim=5|connected=77 79
+1 1 1 1,1 1|id=196|dim=9|connected=78 80
+1 1 1 1,1,1|id=197|dim=10|connected=78 81
+1 1 1 1,1;1|id=198|dim=20|connected=78 79 82
+1 1 1 1;1 1|id=199|dim=9|connected=79 83
+1 1 1 1;1;1|id=200|dim=10|connected=79 84
+1 1 1,1 1 1|id=201|dim=5|connected=80
+1 1 1,1 1,1|id=202|dim=16|connected=80 81 85
+1 1 1,1 1;1|id=203|dim=25|connected=80 82 86
+1 1 1,1,1,1|id=204|dim=10|connected=81 87
+1 1 1,1,1;1|id=205|dim=30|connected=81 82 88
+1 1 1,1;1 1|id=206|dim=25|connected=82 83 89
+1 1 1,1;1,1|id=207|dim=20|connected=82 90
+1 1 1,1;1;1|id=208|dim=30|connected=82 84 91
+1 1 1;1 1 1|id=209|dim=5|connected=83
+1 1 1;1 1;1|id=210|dim=16|connected=83 84 92
+1 1 1;1;1;1|id=211|dim=10|connected=84 93
+1 1,1 1,1 1|id=212|dim=5|connected=85
+1 1,1 1,1,1|id=213|dim=9|connected=85 87
+1 1,1 1,1;1|id=214|dim=25|connected=85 86 88
+1 1,1 1;1 1|id=215|dim=16|connected=86 89
+1 1,1 1;1,1|id=216|dim=16|connected=86 90
+1 1,1 1;1;1|id=217|dim=20|connected=86 91
+1 1,1,1,1,1|id=218|dim=5|connected=87 94
+1 1,1,1,1;1|id=219|dim=20|connected=87 88 95
+1 1,1,1;1 1|id=220|dim=20|connected=88 89
+1 1,1,1;1,1|id=221|dim=25|connected=88 90 96
+1 1,1,1;1;1|id=222|dim=30|connected=88 91 97
+1 1,1;1 1,1|id=223|dim=16|connected=89 90
+1 1,1;1 1;1|id=224|dim=25|connected=89 91 92
+1 1,1;1,1;1|id=225|dim=25|connected=90 91 98
+1 1,1;1;1;1|id=226|dim=20|connected=91 93 99
+1 1;1 1;1 1|id=227|dim=5|connected=92
+1 1;1 1;1;1|id=228|dim=9|connected=92 93
+1 1;1;1;1;1|id=229|dim=5|connected=93 100
+1,1,1,1,1,1|id=230|dim=1|connected=94
+1,1,1,1,1;1|id=231|dim=5|connected=94 95
+1,1,1,1;1,1|id=232|dim=9|connected=95 96
+1,1,1,1;1;1|id=233|dim=10|connected=95 97
+1,1,1;1,1,1|id=234|dim=5|connected=96
+1,1,1;1,1;1|id=235|dim=16|connected=96 97 98
+1,1,1;1;1;1|id=236|dim=10|connected=97 99
+1,1;1,1;1,1|id=237|dim=5|connected=98
+1,1;1,1;1;1|id=238|dim=9|connected=98 99
+1,1;1;1;1;1|id=239|dim=5|connected=99 100
+1;1;1;1;1;1|id=240|dim=1|connected=100
+
+level=7
+7|id=241|dim=1|connected=101
+6 1|id=242|dim=6|connected=101 102
+6,1|id=243|dim=6|connected=101 103
+6;1|id=244|dim=6|connected=101 104
+5 2|id=245|dim=14|connected=102 105
+5 1 1|id=246|dim=15|connected=102 106
+5 1,1|id=247|dim=30|connected=102 103 107
+5 1;1|id=248|dim=30|connected=102 104 108
+5,2|id=249|dim=14|connected=103 109
+5,1,1|id=250|dim=15|connected=103 110
+5,1;1|id=251|dim=30|connected=103 104 111
+5;2|id=252|dim=14|connected=104 112
+5;1;1|id=253|dim=15|connected=104 113
+4 3|id=254|dim=14|connected=105 114
+4 2 1|id=255|dim=35|connected=105 106 115
+4 2,1|id=256|dim=54|connected=105 107 116
+4 2;1|id=257|dim=54|connected=105 108 117
+4 1 1 1|id=258|dim=20|connected=106 118
+4 1 1,1|id=259|dim=60|connected=106 107 119
+4 1 1;1|id=260|dim=60|connected=106 108 120
+4 1,2|id=261|dim=54|connected=107 109 121
+4 1,1 1|id=262|dim=40|connected=107 122
+4 1,1,1|id=263|dim=60|connected=107 110 123
+4 1,1;1|id=264|dim=120|connected=107 108 111 124
+4 1;2|id=265|dim=54|connected=108 112 125
+4 1;1 1|id=266|dim=40|connected=108 126
+4 1;1;1|id=267|dim=60|connected=108 113 127
+4,3|id=268|dim=14|connected=109 128
+4,2,1|id=269|dim=35|connected=109 110 129
+4,2;1|id=270|dim=54|connected=109 111 130
+4,1,1,1|id=271|dim=20|connected=110 131
+4,1,1;1|id=272|dim=60|connected=110 111 132
+4,1;2|id=273|dim=54|connected=111 112 133
+4,1;1,1|id=274|dim=40|connected=111 134
+4,1;1;1|id=275|dim=60|connected=111 113 135
+4;3|id=276|dim=14|connected=112 136
+4;2;1|id=277|dim=35|connected=112 113 137
+4;1;1;1|id=278|dim=20|connected=113 138
+3 3 1|id=279|dim=21|connected=114 115
+3 3,1|id=280|dim=30|connected=114 116
+3 3;1|id=281|dim=30|connected=114 117
+3 2 2|id=282|dim=21|connected=115 139
+3 2 1 1|id=283|dim=35|connected=115 118 140
+3 2 1,1|id=284|dim=96|connected=115 116 119 141
+3 2 1;1|id=285|dim=96|connected=115 117 120 142
+3 2,2|id=286|dim=66|connected=116 121 143
+3 2,1 1|id=287|dim=61|connected=116 122 144
+3 2,1,1|id=288|dim=75|connected=116 123 145
+3 2,1;1|id=289|dim=150|connected=116 117 124 146
+3 2;2|id=290|dim=66|connected=117 125 147
+3 2;1 1|id=291|dim=61|connected=117 126 148
+3 2;1;1|id=292|dim=75|connected=117 127 149
+3 1 1 1 1|id=293|dim=15|connected=118 150
+3 1 1 1,1|id=294|dim=60|connected=118 119 151
+3 1 1 1;1|id=295|dim=60|connected=118 120 152
+3 1 1,2|id=296|dim=75|connected=119 121 153
+3 1 1,1 1|id=297|dim=75|connected=119 122 154
+3 1 1,1,1|id=298|dim=90|connected=119 123 155
+3 1 1,1;1|id=299|dim=180|connected=119 120 124 156
+3 1 1;2|id=300|dim=75|connected=120 125 157
+3 1 1;1 1|id=301|dim=75|connected=120 126 158
+3 1 1;1;1|id=302|dim=90|connected=120 127 159
+3 1,3|id=303|dim=30|connected=121 128
+3 1,2 1|id=304|dim=61|connected=121 122 160
+3 1,2,1|id=305|dim=96|connected=121 123 129 161
+3 1,2;1|id=306|dim=150|connected=121 124 130 162
+3 1,1 1,1|id=307|dim=75|connected=122 123 163
+3 1,1 1;1|id=308|dim=120|connected=122 124 164
+3 1,1,1,1|id=309|dim=60|connected=123 131 165
+3 1,1,1;1|id=310|dim=180|connected=123 124 132 166
+3 1,1;2|id=311|dim=150|connected=124 125 133 167
+3 1,1;1 1|id=312|dim=120|connected=124 126 168
+3 1,1;1,1|id=313|dim=120|connected=124 134 169
+3 1,1;1;1|id=314|dim=180|connected=124 127 135 170
+3 1;3|id=315|dim=30|connected=125 136
+3 1;2 1|id=316|dim=61|connected=125 126 171
+3 1;2;1|id=317|dim=96|connected=125 127 137 172
+3 1;1 1;1|id=318|dim=75|connected=126 127 173
+3 1;1;1;1|id=319|dim=60|connected=127 138 174
+3,3,1|id=320|dim=21|connected=128 129
+3,3;1|id=321|dim=30|connected=128 130
+3,2,2|id=322|dim=21|connected=129 175
+3,2,1,1|id=323|dim=35|connected=129 131 176
+3,2,1;1|id=324|dim=96|connected=129 130 132 177
+3,2;2|id=325|dim=66|connected=130 133 178
+3,2;1,1|id=326|dim=61|connected=130 134 179
+3,2;1;1|id=327|dim=75|connected=130 135 180
+3,1,1,1,1|id=328|dim=15|connected=131 181
+3,1,1,1;1|id=329|dim=60|connected=131 132 182
+3,1,1;2|id=330|dim=75|connected=132 133 183
+3,1,1;1,1|id=331|dim=75|connected=132 134 184
+3,1,1;1;1|id=332|dim=90|connected=132 135 185
+3,1;3|id=333|dim=30|connected=133 136
+3,1;2,1|id=334|dim=61|connected=133 134 186
+3,1;2;1|id=335|dim=96|connected=133 135 137 187
+3,1;1,1;1|id=336|dim=75|connected=134 135 188
+3,1;1;1;1|id=337|dim=60|connected=135 138 189
+3;3;1|id=338|dim=21|connected=136 137
+3;2;2|id=339|dim=21|connected=137 190
+3;2;1;1|id=340|dim=35|connected=137 138 191
+3;1;1;1;1|id=341|dim=15|connected=138 192
+2 2 2 1|id=342|dim=14|connected=139 140
+2 2 2,1|id=343|dim=30|connected=139 141
+2 2 2;1|id=344|dim=30|connected=139 142
+2 2 1 1 1|id=345|dim=14|connected=140 150
+2 2 1 1,1|id=346|dim=54|connected=140 141 151
+2 2 1 1;1|id=347|dim=54|connected=140 142 152
+2 2 1,2|id=348|dim=61|connected=141 143 153
+2 2 1,1 1|id=349|dim=66|connected=141 144 154
+2 2 1,1,1|id=350|dim=75|connected=141 145 155
+2 2 1,1;1|id=351|dim=150|connected=141 142 146 156
+2 2 1;2|id=352|dim=61|connected=142 147 157
+2 2 1;1 1|id=353|dim=66|connected=142 148 158
+2 2 1;1;1|id=354|dim=75|connected=142 149 159
+2 2,2 1|id=355|dim=48|connected=143 144 160
+2 2,2,1|id=356|dim=61|connected=143 145 161
+2 2,2;1|id=357|dim=96|connected=143 146 162
+2 2,1 1,1|id=358|dim=61|connected=144 145 163
+2 2,1 1;1|id=359|dim=96|connected=144 146 164
+2 2,1,1,1|id=360|dim=40|connected=145 165
+2 2,1,1;1|id=361|dim=120|connected=145 146 166
+2 2,1;2|id=362|dim=96|connected=146 147 167
+2 2,1;1 1|id=363|dim=96|connected=146 148 168
+2 2,1;1,1|id=364|dim=80|connected=146 169
+2 2,1;1;1|id=365|dim=120|connected=146 149 170
+2 2;2 1|id=366|dim=48|connected=147 148 171
+2 2;2;1|id=367|dim=61|connected=147 149 172
+2 2;1 1;1|id=368|dim=61|connected=148 149 173
+2 2;1;1;1|id=369|dim=40|connected=149 174
+2 1 1 1 1 1|id=370|dim=6|connected=150 193
+2 1 1 1 1,1|id=371|dim=30|connected=150 151 194
+2 1 1 1 1;1|id=372|dim=30|connected=150 152 195
+2 1 1 1,2|id=373|dim=40|connected=151 153
+2 1 1 1,1 1|id=374|dim=54|connected=151 154 196
+2 1 1 1,1,1|id=375|dim=60|connected=151 155 197
+2 1 1 1,1;1|id=376|dim=120|connected=151 152 156 198
+2 1 1 1;2|id=377|dim=40|connected=152 157
+2 1 1 1;1 1|id=378|dim=54|connected=152 158 199
+2 1 1 1;1;1|id=379|dim=60|connected=152 159 200
+2 1 1,2 1|id=380|dim=61|connected=153 154 160
+2 1 1,2,1|id=381|dim=75|connected=153 155 161
+2 1 1,2;1|id=382|dim=120|connected=153 156 162
+2 1 1,1 1 1|id=383|dim=30|connected=154 201
+2 1 1,1 1,1|id=384|dim=96|connected=154 155 163 202
+2 1 1,1 1;1|id=385|dim=150|connected=154 156 164 203
+2 1 1,1,1,1|id=386|dim=60|connected=155 165 204
+2 1 1,1,1;1|id=387|dim=180|connected=155 156 166 205
+2 1 1,1;2|id=388|dim=120|connected=156 157 167
+2 1 1,1;1 1|id=389|dim=150|connected=156 158 168 206
+2 1 1,1;1,1|id=390|dim=120|connected=156 169 207
+2 1 1,1;1;1|id=391|dim=180|connected=156 159 170 208
+2 1 1;2 1|id=392|dim=61|connected=157 158 171
+2 1 1;2;1|id=393|dim=75|connected=157 159 172
+2 1 1;1 1 1|id=394|dim=30|connected=158 209
+2 1 1;1 1;1|id=395|dim=96|connected=158 159 173 210
+2 1 1;1;1;1|id=396|dim=60|connected=159 174 211
+2 1,2 1,1|id=397|dim=66|connected=160 161 163
+2 1,2 1;1|id=398|dim=96|connected=160 162 164
+2 1,2,2|id=399|dim=30|connected=161 175
+2 1,2,1,1|id=400|dim=54|connected=161 165 176
+2 1,2,1;1|id=401|dim=150|connected=161 162 166 177
+2 1,2;2|id=402|dim=96|connected=162 167 178
+2 1,2;1 1|id=403|dim=80|connected=162 168
+2 1,2;1,1|id=404|dim=96|connected=162 169 179
+2 1,2;1;1|id=405|dim=120|connected=162 170 180
+2 1,1 1,1 1|id=406|dim=30|connected=163 212
+2 1,1 1,1,1|id=407|dim=54|connected=163 165 213
+2 1,1 1,1;1|id=408|dim=150|connected=163 164 166 214
+2 1,1 1;2|id=409|dim=80|connected=164 167
+2 1,1 1;1 1|id=410|dim=96|connected=164 168 215
+2 1,1 1;1,1|id=411|dim=96|connected=164 169 216
+2 1,1 1;1;1|id=412|dim=120|connected=164 170 217
+2 1,1,1,1,1|id=413|dim=30|connected=165 181 218
+2 1,1,1,1;1|id=414|dim=120|connected=165 166 182 219
+2 1,1,1;2|id=415|dim=120|connected=166 167 183
+2 1,1,1;1 1|id=416|dim=120|connected=166 168 220
+2 1,1,1;1,1|id=417|dim=150|connected=166 169 184 221
+2 1,1,1;1;1|id=418|dim=180|connected=166 170 185 222
+2 1,1;2 1|id=419|dim=96|connected=167 168 171
+2 1,1;2,1|id=420|dim=96|connected=167 169 186
+2 1,1;2;1|id=421|dim=150|connected=167 170 172 187
+2 1,1;1 1,1|id=422|dim=96|connected=168 169 223
+2 1,1;1 1;1|id=423|dim=150|connected=168 170 173 224
+2 1,1;1,1;1|id=424|dim=150|connected=169 170 188 225
+2 1,1;1;1;1|id=425|dim=120|connected=170 174 189 226
+2 1;2 1;1|id=426|dim=66|connected=171 172 173
+2 1;2;2|id=427|dim=30|connected=172 190
+2 1;2;1;1|id=428|dim=54|connected=172 174 191
+2 1;1 1;1 1|id=429|dim=30|connected=173 227
+2 1;1 1;1;1|id=430|dim=54|connected=173 174 228
+2 1;1;1;1;1|id=431|dim=30|connected=174 192 229
+2,2,2,1|id=432|dim=14|connected=175 176
+2,2,2;1|id=433|dim=30|connected=175 177
+2,2,1,1,1|id=434|dim=14|connected=176 181
+2,2,1,1;1|id=435|dim=54|connected=176 177 182
+2,2,1;2|id=436|dim=61|connected=177 178 183
+2,2,1;1,1|id=437|dim=66|connected=177 179 184
+2,2,1;1;1|id=438|dim=75|connected=177 180 185
+2,2;2,1|id=439|dim=48|connected=178 179 186
+2,2;2;1|id=440|dim=61|connected=178 180 187
+2,2;1,1;1|id=441|dim=61|connected=179 180 188
+2,2;1;1;1|id=442|dim=40|connected=180 189
+2,1,1,1,1,1|id=443|dim=6|connected=181 230
+2,1,1,1,1;1|id=444|dim=30|connected=181 182 231
+2,1,1,1;2|id=445|dim=40|connected=182 183
+2,1,1,1;1,1|id=446|dim=54|connected=182 184 232
+2,1,1,1;1;1|id=447|dim=60|connected=182 185 233
+2,1,1;2,1|id=448|dim=61|connected=183 184 186
+2,1,1;2;1|id=449|dim=75|connected=183 185 187
+2,1,1;1,1,1|id=450|dim=30|connected=184 234
+2,1,1;1,1;1|id=451|dim=96|connected=184 185 188 235
+2,1,1;1;1;1|id=452|dim=60|connected=185 189 236
+2,1;2,1;1|id=453|dim=66|connected=186 187 188
+2,1;2;2|id=454|dim=30|connected=187 190
+2,1;2;1;1|id=455|dim=54|connected=187 189 191
+2,1;1,1;1,1|id=456|dim=30|connected=188 237
+2,1;1,1;1;1|id=457|dim=54|connected=188 189 238
+2,1;1;1;1;1|id=458|dim=30|connected=189 192 239
+2;2;2;1|id=459|dim=14|connected=190 191
+2;2;1;1;1|id=460|dim=14|connected=191 192
+2;1;1;1;1;1|id=461|dim=6|connected=192 240
+1 1 1 1 1 1 1|id=462|dim=1|connected=193
+1 1 1 1 1 1,1|id=463|dim=6|connected=193 194
+1 1 1 1 1 1;1|id=464|dim=6|connected=193 195
+1 1 1 1 1,1 1|id=465|dim=14|connected=194 196
+1 1 1 1 1,1,1|id=466|dim=15|connected=194 197
+1 1 1 1 1,1;1|id=467|dim=30|connected=194 195 198
+1 1 1 1 1;1 1|id=468|dim=14|connected=195 199
+1 1 1 1 1;1;1|id=469|dim=15|connected=195 200
+1 1 1 1,1 1 1|id=470|dim=14|connected=196 201
+1 1 1 1,1 1,1|id=471|dim=35|connected=196 197 202
+1 1 1 1,1 1;1|id=472|dim=54|connected=196 198 203
+1 1 1 1,1,1,1|id=473|dim=20|connected=197 204
+1 1 1 1,1,1;1|id=474|dim=60|connected=197 198 205
+1 1 1 1,1;1 1|id=475|dim=54|connected=198 199 206
+1 1 1 1,1;1,1|id=476|dim=40|connected=198 207
+1 1 1 1,1;1;1|id=477|dim=60|connected=198 200 208
+1 1 1 1;1 1 1|id=478|dim=14|connected=199 209
+1 1 1 1;1 1;1|id=479|dim=35|connected=199 200 210
+1 1 1 1;1;1;1|id=480|dim=20|connected=200 211
+1 1 1,1 1 1,1|id=481|dim=21|connected=201 202
+1 1 1,1 1 1;1|id=482|dim=30|connected=201 203
+1 1 1,1 1,1 1|id=483|dim=21|connected=202 212
+1 1 1,1 1,1,1|id=484|dim=35|connected=202 204 213
+1 1 1,1 1,1;1|id=485|dim=96|connected=202 203 205 214
+1 1 1,1 1;1 1|id=486|dim=66|connected=203 206 215
+1 1 1,1 1;1,1|id=487|dim=61|connected=203 207 216
+1 1 1,1 1;1;1|id=488|dim=75|connected=203 208 217
+1 1 1,1,1,1,1|id=489|dim=15|connected=204 218
+1 1 1,1,1,1;1|id=490|dim=60|connected=204 205 219
+1 1 1,1,1;1 1|id=491|dim=75|connected=205 206 220
+1 1 1,1,1;1,1|id=492|dim=75|connected=205 207 221
+1 1 1,1,1;1;1|id=493|dim=90|connected=205 208 222
+1 1 1,1;1 1 1|id=494|dim=30|connected=206 209
+1 1 1,1;1 1,1|id=495|dim=61|connected=206 207 223
+1 1 1,1;1 1;1|id=496|dim=96|connected=206 208 210 224
+1 1 1,1;1,1;1|id=497|dim=75|connected=207 208 225
+1 1 1,1;1;1;1|id=498|dim=60|connected=208 211 226
+1 1 1;1 1 1;1|id=499|dim=21|connected=209 210
+1 1 1;1 1;1 1|id=500|dim=21|connected=210 227
+1 1 1;1 1;1;1|id=501|dim=35|connected=210 211 228
+1 1 1;1;1;1;1|id=502|dim=15|connected=211 229
+1 1,1 1,1 1,1|id=503|dim=14|connected=212 213
+1 1,1 1,1 1;1|id=504|dim=30|connected=212 214
+1 1,1 1,1,1,1|id=505|dim=14|connected=213 218
+1 1,1 1,1,1;1|id=506|dim=54|connected=213 214 219
+1 1,1 1,1;1 1|id=507|dim=61|connected=214 215 220
+1 1,1 1,1;1,1|id=508|dim=66|connected=214 216 221
+1 1,1 1,1;1;1|id=509|dim=75|connected=214 217 222
+1 1,1 1;1 1,1|id=510|dim=48|connected=215 216 223
+1 1,1 1;1 1;1|id=511|dim=61|connected=215 217 224
+1 1,1 1;1,1;1|id=512|dim=61|connected=216 217 225
+1 1,1 1;1;1;1|id=513|dim=40|connected=217 226
+1 1,1,1,1,1,1|id=514|dim=6|connected=218 230
+1 1,1,1,1,1;1|id=515|dim=30|connected=218 219 231
+1 1,1,1,1;1 1|id=516|dim=40|connected=219 220
+1 1,1,1,1;1,1|id=517|dim=54|connected=219 221 232
+1 1,1,1,1;1;1|id=518|dim=60|connected=219 222 233
+1 1,1,1;1 1,1|id=519|dim=61|connected=220 221 223
+1 1,1,1;1 1;1|id=520|dim=75|connected=220 222 224
+1 1,1,1;1,1,1|id=521|dim=30|connected=221 234
+1 1,1,1;1,1;1|id=522|dim=96|connected=221 222 225 235
+1 1,1,1;1;1;1|id=523|dim=60|connected=222 226 236
+1 1,1;1 1,1;1|id=524|dim=66|connected=223 224 225
+1 1,1;1 1;1 1|id=525|dim=30|connected=224 227
+1 1,1;1 1;1;1|id=526|dim=54|connected=224 226 228
+1 1,1;1,1;1,1|id=527|dim=30|connected=225 237
+1 1,1;1,1;1;1|id=528|dim=54|connected=225 226 238
+1 1,1;1;1;1;1|id=529|dim=30|connected=226 229 239
+1 1;1 1;1 1;1|id=530|dim=14|connected=227 228
+1 1;1 1;1;1;1|id=531|dim=14|connected=228 229
+1 1;1;1;1;1;1|id=532|dim=6|connected=229 240
+1,1,1,1,1,1,1|id=533|dim=1|connected=230
+1,1,1,1,1,1;1|id=534|dim=6|connected=230 231
+1,1,1,1,1;1,1|id=535|dim=14|connected=231 232
+1,1,1,1,1;1;1|id=536|dim=15|connected=231 233
+1,1,1,1;1,1,1|id=537|dim=14|connected=232 234
+1,1,1,1;1,1;1|id=538|dim=35|connected=232 233 235
+1,1,1,1;1;1;1|id=539|dim=20|connected=233 236
+1,1,1;1,1,1;1|id=540|dim=21|connected=234 235
+1,1,1;1,1;1,1|id=541|dim=21|connected=235 237
+1,1,1;1,1;1;1|id=542|dim=35|connected=235 236 238
+1,1,1;1;1;1;1|id=543|dim=15|connected=236 239
+1,1;1,1;1,1;1|id=544|dim=14|connected=237 238
+1,1;1,1;1;1;1|id=545|dim=14|connected=238 239
+1,1;1;1;1;1;1|id=546|dim=6|connected=239 240
+1;1;1;1;1;1;1|id=547|dim=1|connected=240
+
